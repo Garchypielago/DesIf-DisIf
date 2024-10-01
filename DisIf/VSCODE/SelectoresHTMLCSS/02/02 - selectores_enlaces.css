@@ -1,0 +1,63 @@
+/* Crear una capa llamada capa1 dentro de la cual los enlaces 
+sobre los que nos posicionemos se pongan con este fondo . */
+div#capa1{
+	background-color: rgb(255, 206, 133);
+}
+
+.color1, div#capa1  a:hover {
+	background-color: blanchedalmond;
+}
+
+/* Crear una capa llamada capa2, en la cual cuando el cursor 
+este encima de ella todos sus enlaces se pongan con este fondo */
+div#capa2{
+	background-color: rgb(255, 206, 133);
+}
+
+.color2, div#capa2:hover a {
+	background-color: blanchedalmond;
+}
+
+/* Crear una capa llamada capa3, dentro de la cual habra un 
+hipervinculo a google llamado google que se pondrá se pongan 
+con este fondo cuando nos posicionemos sobre él. */
+div#capa3{
+	background-color: rgb(85, 0, 85);
+}
+
+.color3, div#capa3 a[href="http://www.google.es"]:hover {
+	background-color: darkmagenta;
+}
+
+/* Crear una capa llamada capa4, en la que al posicionarnos 
+sobre ella, habrá un hipervinculo llamado Comunidad de 
+Madrid que se pondrá con este fondo . */
+div#capa4{
+	background-color: rgb(85, 0, 85);
+}
+
+.color4, div#capa4:hover a#madrid{
+	background-color: darkmagenta;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

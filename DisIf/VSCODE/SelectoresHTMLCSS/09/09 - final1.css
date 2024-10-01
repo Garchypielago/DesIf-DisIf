@@ -1,0 +1,31 @@
+div#galeria {
+    border: 2px solid black ;
+    width: 60%;
+    overflow: auto;
+    padding: 0.5em;
+}
+
+div#galeria div.caja {
+    border: 2px solid black ;
+    margin: 10px;
+    width: calc(33.33% - 1.5em);
+    height: 6em;
+    float: left;
+    margin: 0.5em;
+}
+
+div#galeria div.caja:nth-child(1n+4) {
+    background-color: green;
+}
+
+div#galeria div.caja:nth-last-child(-n+3) {
+    background-color: blue;
+}
+
+div#galeria div.caja:nth-child(4n+2){
+    visibility: hidden;
+}
+
+div#galeria div.caja:nth-child(4n+4){
+    display: none;
+}

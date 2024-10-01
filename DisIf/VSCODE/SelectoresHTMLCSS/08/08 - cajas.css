@@ -1,0 +1,35 @@
+div#container {
+    margin-left: 0.5em;
+}
+
+div#container h1 {
+    border: 3px blue solid;
+    padding: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+div#container h2 {
+    border: 3px gray solid;
+    padding-left: 0.5em;
+}
+
+div#container ul {
+    border: 3px rgb(66, 255, 14) solid;
+}
+
+/* div#container li {
+    margin-bottom: 1em;
+}
+div#container li:last-child {
+    margin-bottom: 0em;
+} */
+
+div#container li:nth-child(1n+2) {
+    margin-top: 1em;
+}
+
+div#container p {
+    display: block;
+    margin: 0px;
+}

@@ -1,0 +1,84 @@
+/* Párrafo con estilos que se aplican por ser el primer 
+párrafo del documento. Este párrafo esta en negrita y 
+cursiva y también ha sido indentado. Todo esta realizado 
+desde la hoja de estilos en cascada o CSS. */
+
+body p:first-of-type{
+    font-weight: bolder;
+    font-style: oblique;
+    text-indent: 10px;
+}
+
+#consejo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(199, 199, 119);
+    color: rgb(110, 0, 158);
+    text-align: justify;
+    font-weight: bolder;
+}
+
+#textolinea {
+    text-transform: capitalize;
+    background-color: antiquewhite;
+    color: rgb(133, 105, 71);
+    font-variant: small-caps;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+}
+
+h3 {
+    background-color: rgb(154, 102, 50);
+    color: antiquewhite;
+}
+
+.clase, h4 {
+    color: mediumorchid;
+    font-style: italic;
+}
+
+#idparaestilo {
+    /* font-family: monospace; */
+    color: rgb(255, 255, 255);
+    background-color: rgb(198, 143, 222);
+    text-align: center;
+    letter-spacing: 4px;
+    word-spacing: 0.7em;
+}
+
+table{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

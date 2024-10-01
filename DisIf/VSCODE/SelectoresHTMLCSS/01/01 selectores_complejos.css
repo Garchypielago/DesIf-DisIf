@@ -1,0 +1,77 @@
+/* Pregunta1- Las combinaciones de 4 celdas con fondo marron, 
+las combinaciones de 3 celdas con fondo amarillento, 
+las combinaciones de 2 celdas con fondo verdoso. */
+
+td[colspan="4"],
+td[rowspan="4"] {
+    background-color: rgb(159, 115, 71);
+}
+
+td[colspan="3"],
+td[rowspan="3"] {
+    background-color: rgb(239, 255, 135);
+}
+
+td[colspan="2"],
+td[rowspan="2"] {
+    background-color: rgb(2, 127, 0);
+}
+
+/* Pregunta2 - Decora los li que corresponden a las preguntas 
+(identificados con pregunta1, pregunta2, ...) con letra Verdana 
+y otro tipo de marcador, deja el resto igual, por ejemplo los siguientes. */
+
+li[id^="pregunta"] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style-type: georgian;
+    font-size: smaller;
+    color: darkorchid;
+}
+
+/* Sin id - bbb, aquí un texto en negrita que no establece el fondo en amarillo */
+
+span.negrita {
+    font-weight: bolder;
+}
+
+/* Pregunta3 - Crea un estilo que cuando aparezca un texto en negrita en la pregunta
+ (como este) le ponga fondo amarillo. */
+
+li[id*="pregunta"] span.negrita {
+    background-color: rgb(255, 255, 176);
+}
+
+/* Pregunta4 - Crea un estilo que se aplique a los comentarios letra italica 
+y borde punteado (lo aconsejable es una clase) */
+
+p.comentarios{
+    font-style: italic;
+    border-style: dotted;
+}
+
+/* Pregunta5 - Crea un estilo subrayado para los párrafos que siguen a otro párrafo. */
+
+p+p{
+    text-decoration: underline;
+}
+
+/* Pregunta6 - Pon fondo celeste a los hipervínculos que sean hijos directos de un 
+ítem de lista. Este vinculo sí, pero este que está dentro de una marca de cursiva no. */
+
+li>a{
+    background-color: rgb(190, 255, 255);
+}
+
+span.cursiva{
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+

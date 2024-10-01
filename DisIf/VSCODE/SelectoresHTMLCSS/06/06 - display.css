@@ -1,0 +1,44 @@
+* {
+    border: 1px black solid;
+    /* border-collapse: collapse; */
+}
+
+span {
+    display: block;
+}
+
+#negrita {
+    font-weight: bolder;
+}
+
+.parrafoenlinea {
+    display: inline;
+}
+
+.parrafoenlista {
+    display: list-item;
+    list-style: georgian;
+    margin-left: 3em;
+}
+
+.nomostrar {
+    display: none;
+}
+
+.bloqueenlinea {
+    display: inline-block;
+    height: 8em;
+    width: 8em;
+}
+
+.celdadetabla {
+    display: inline-table;
+    width: 31%;
+    padding: 0.3em;
+}
+
+.desplazado {
+    position: relative;
+    top: 20px;
+    right: 20px;
+}

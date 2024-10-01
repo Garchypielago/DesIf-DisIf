@@ -1,0 +1,45 @@
+table.ejercicio {
+    font: .9em Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th {
+    border: 1.5px solid black;
+}
+
+table.ejercicio tr.cabecera {
+    background: #F5F5F5 url(imagenes/fondo_gris.gif) repeat-x;
+}
+
+table.ejercicio thead th {
+    text-align: center;
+}
+
+table.ejercicio tr {
+    height: 4em;
+    vertical-align: bottom;
+}
+
+table.ejercicio th.euro {
+    background: url(imagenes/euro.png) no-repeat left top;
+}
+table.ejercicio th.dolar {
+    background: url(imagenes/dolar.png) no-repeat left top;
+}
+table.ejercicio th.libra {
+    background: url(imagenes/libra.png) no-repeat left top;
+}
+table.ejercicio th.yen {
+    background: url(imagenes/yen.png) no-repeat left top;
+}
+
+table.ejercicio tbody tr th.moneda{
+    background-color: rgb(209, 227, 233);
+    padding: 0.5em 0.3em 0.4em 1.2em;
+}
+
+table.ejercicio tbody tr:nth-child(2n+1) td{
+    background-color: rgb(255, 251, 206);
+}

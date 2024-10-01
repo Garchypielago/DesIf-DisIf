@@ -1,0 +1,204 @@
+<html>
+
+<head>
+	<style type="text/css">
+		/* funcionamiento básico del sistema de pestañas */
+		/*Este código que acabamos de ver hace lo siguiente: */
+		/*Esconder el contenido de todas las pestañas.*/
+		/* Mostrar el contenido de la pestaña que tiene el :target y 
+		de la última pestaña (que recordemos, en realidad es la primera pestaña).
+		Esconder la última pestaña si resulta que antes tiene alguna pestaña con el :target.
+		Si pruebas este código verás que el mecanismo básico ya funciona. Si ninguna pestaña 
+		tiene el :target, se muestra el contenido de la primera pestaña. Mientras que en caso 
+		contrario, se muestra el contenido de la pestaña que tiene el :target, tal y como uno podría desear.
+		*/
+
+		.tab-content {
+			display: none;
+		}
+
+		.tab:target .tab-content,
+		.tab:last-of-type .tab-content {
+			display: block;
+		}
+
+		.tab:target~.tab:last-of-type .tab-content {
+			display: none;
+		}
+
+
+
+
+		/*
+		La segunda parte del código CSS que vamos a ver es para definir algunos 
+		parámetros del sistema de pestañas, y para empezar a darle algo de aspecto básico:
+		*/
+		:root {
+			--tabs-border-color: #ABCDEF;
+			--tabs-border-size: 3px;
+			--tabs-text-color: white;
+			--tabs-dark-color: #012345;
+			--tabs-lite-color: #345678;
+			--tabs-width: 120px;
+			--tabs-height: 40px;
+		}
+
+		/* aspecto básico */
+		body {
+			font-family: sans-serif;
+			line-height: 1.2;
+		}
+
+		h2,
+		p {
+			margin: 0;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.tabs * {
+			box-sizing: border-box;
+		}
+
+
+
+
+
+
+		/* La tercera parte del código CSS es la encargada de colocar las pestañas en su sitio correcto:*/
+		/* esto es para posicionar las pestañas correctamente */
+		/* Tal y como se puede observar, usamos position: absolute; para colocar las pestañas en su sitio. 
+		Además, usamos un tamaño definido para el ancho y alto de las pestañas. Esto son limitaciones de 
+		este ejemplo debido a la estructura del HTML donde los enlaces de las pestañas están dentro de los 
+		propios elementos enlazados. Pero tal y como se ha comentado, es la única forma de poder cambiar el 
+		aspecto de la pestaña.
+
+		Aquí se han incluido selectores para que todo funcione correctamente si se añaden hasta 9 pestañas 
+		diferentes en el HTML (cada una con su correspondiente atributo id, claro). La variable –tabs-position 
+		se usa para calcular la posición left de la pestaña.
+
+		Si pruebas el código verás que ya tenemos las pestañas prácticamente finalizadas, y el funcionamiento es casi perfecto.
+		*/
+
+
+		.tab-container {
+			position: relative;
+			padding-top: var(--tabs-height);
+			/* en esta zona colocaremos las pestañas */
+		}
+
+		#tab1>a {
+			--tabs-position: 0;
+		}
+
+		#tab2>a {
+			--tabs-position: 1;
+		}
+
+		.tab>a {
+			text-align: center;
+			position: absolute;
+			width: calc(var(--tabs-width));
+			height: calc(var(--tabs-height) + var(--tabs-border-size));
+			top: 0;
+			left: calc(var(--tabs-width) * var(--tabs-position));
+			/* posición de cada pestaña */
+		}
+
+
+		/* El cuarto y último bloque de código CSS es el encargado de finalizar el aspecto de este sistema de navegación de pestañas:*/
+		/*
+		Lo mas complicado son los últimos 2 grupos de selectores. Aquí, de nuevo, hacemos algo similar al primer bloque de CSS 
+		para cambiar el aspecto de la pestaña actualmente activa. Usamos el mismo truco; le damos aspecto de pestaña activa a 
+		la que tiene el :target y a la última pestaña. Y finalmente, si la última pestaña se encuentra después de otra que tenga 
+		el :target le quitamos el aspecto de pestaña activa.
+		*/
+
+		.tabs {
+			padding: 10px;
+			color: var(--tabs-text-color);
+		}
+
+		.tab-content {
+			background-color: var(--tabs-lite-color);
+			padding: 20px;
+			border: var(--tabs-border-size) solid var(--tabs-border-color);
+			border-radius: 0 0 10px 10px;
+			position: relative;
+			z-index: 100;
+		}
+
+		.tab>a {
+			background-color: var(--tabs-dark-color);
+			padding: 10px;
+			border: var(--tabs-border-size) solid var(--tabs-border-color);
+			border-radius: 10px 10px 0 0;
+			border-bottom: 0;
+		}
+
+		.tab:target>a,
+		.tab:last-of-type>a {
+			background-color: var(--tabs-lite-color);
+			z-index: 200;
+		}
+
+		.tab:target~.tab:last-of-type>a {
+			background-color: var(--tabs-dark-color);
+			z-index: 0;
+		}
+
+		/*  Mis añadidos */
+		input,
+		button,
+		select {
+			border-radius: 3px;
+		}
+	</style>
+
+</head>
+
+
+
+<body>
+	<div class="tabs">
+		<div class="tab-container">
+			<div id="tab2" class="tab">
+				<a href="#tab2">CATÁLOGO</a>
+				<div class="tab-content">
+					<h2>Catálogo</h2>
+					<input type="text" id="txtBuscarCat"> en: </input>
+					<select name="selectBox" id="selectBox">
+						<option value="oppCualquiera">Cualquier Campo</option>
+						<option value="oppAutor">Autor</option>
+						<option value="oppTitulo">Titulo</option>
+						<option value="oppMateria">Materia</option>
+						<option value="oppRevista">Revista</option>
+					</select>
+					<button id="btnBuscarCat" onclick="limpiar('txtBuscarCat'); Alerta('EI-02B.html')">Buscar </button>
+					<button id="btnLimpiarCat" onclick="limpiar('txtBuscarCat')">Limpiar </button>
+
+				</div>
+			</div>
+			<div id="tab1" class="tab">
+				<a href="#tab1">BRAIN</a>
+				<div class="tab-content">
+					<h2>Recursos Bibliográficos</h2>
+					<input type="text" id="txtBuscarBrain" />
+					<a href="#tab2">
+						<button id="btnBuscarBrain" onclick="limpiar('txtBuscarBrain')">Buscar </button>
+					</a>
+					<button id="btnLimpiarBrain" onclick="limpiar('txtBuscarBrain')">Limpiar </button>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>
