@@ -1,0 +1,27 @@
+div.test {
+    margin-bottom: 30px;
+    background-color: aquamarine;
+}
+
+ul, li {
+    list-style-type: none;
+    padding: 0%;
+}
+
+.flexcenter {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 31rem;
+}
+
+div.test ul li {
+    background-color: orangered;
+    width: 25%;
+    color: white;
+    text-align: center;
+    line-height: 3em;
+    font-size: 1.5em;
+    font-weight: bold;
+}

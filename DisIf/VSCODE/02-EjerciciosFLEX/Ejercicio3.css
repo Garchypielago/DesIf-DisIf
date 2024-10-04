@@ -1,0 +1,38 @@
+/* se calculado todo al pixel */
+
+.flex-container{
+    max-width: 400px;
+    height: 15rem;
+    margin: 1,2em auto;
+    padding: 0;
+
+    display: flex;
+    background-color: midnightblue;
+
+    list-style: none;
+    justify-content: space-around;
+    flex-flow: row wrap-reverse;
+}
+
+.flex-container:nth-child(1){
+    justify-content: space-around;
+    align-content: center;
+}
+
+.flex-container:nth-child(2){
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.item {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 1.2em;
+
+    background-color: steelblue;
+    text-align: center;
+    border: 1px white solid;
+}
+
+

@@ -1,0 +1,77 @@
+:root{
+    --alto:10rem;
+}
+
+body {
+    background-color: aquamarine;
+    font-family: sans-serif;
+}
+
+ul.test {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: var(--alto);
+    background-color: gray;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 10px;
+}
+
+.test li {
+    background-color: orangered;
+    width: 18%;
+    color: white;
+    text-align: center;
+    line-height: 3em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.flexend {
+    align-items: flex-end;
+}
+
+.flexend > li:nth-child(3) {
+    align-self: flex-start;
+}
+
+.flexstart {
+    align-items: flex-start;
+}
+
+.flexstart > li:nth-child(3) {
+    align-self: center;
+}
+
+.baseline {
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* tienen diferentes tamaños a los del profe por ue he empezado diferente el ejeicio */
+.baseline li:nth-child(1) {
+    height: auto;
+    line-height: 2em;
+}
+
+.baseline li:nth-child(2) {
+    height: auto;
+    line-height: 1.5em;
+}
+
+.baseline li:nth-child(3) {
+    height: auto;
+    line-height: 4.5em;
+}
+
+.baseline li:nth-child(4) {
+    height: auto;
+    line-height: 6em;
+}
+
+.baseline li:nth-child(5) {
+    height: auto;
+    line-height: 1em;
+}
