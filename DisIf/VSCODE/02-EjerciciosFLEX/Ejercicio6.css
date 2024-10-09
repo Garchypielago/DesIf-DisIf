@@ -1,0 +1,57 @@
+.container {
+    display: inline;
+    width: 75%;
+}
+
+header {
+    background-color: grey;
+    display: flex;
+    padding: 5vh;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+}
+
+footer {
+    background-color: cadetblue;
+    display: flex;
+    padding: 5vh;
+    justify-content: space-around;
+}
+
+/* todo variar los tamños de las cajas */
+
+.container div{
+    background-color: bisque;
+    border: 1px black solid;
+    /* height: 100%; */
+    /* width: 100%; */
+    font-size: x-small;
+}
+
+header div{
+    padding: 2vh;
+    flex-basis: 25%;
+    flex-shrink: 0;
+}
+
+header div:nth-child(1){
+    flex-grow: 1;
+    order: 1;
+}
+
+footer div{
+    height: 35vh;
+    transform: translateY(2vh);
+}
+
+footer div:nth-child(1){
+    flex-grow: 4;
+}
+
+footer div:nth-child(2){
+    flex-grow: 1;
+}
+
+footer div:nth-child(3){
+    flex-grow: 4;
+}
