@@ -1,0 +1,48 @@
+*{
+	box-sizing: border-box; /* El padding y el borde se suman al tamaño */	
+}
+
+#galeria {
+	max-width: 40.625rem;
+	width: 50%;
+	border: 1px solid black;
+	overflow: auto;
+	margin: auto;
+	padding: 0.5em; /* Espaciado exterior */	
+}
+
+#galeria div.caja{
+	border: 1px solid black;
+	width: calc(33.33% - 1em); /* Restamos al tamaño de las cajas el espaciado a la derecha ya la izquierda para que cuadre el diseño */
+	height: 9.375rem;
+	float: left;
+	margin: 0.5em; /* Espaciado interior */
+}
+
+#galeria div.caja:nth-child(n+4){ /* A partir del cuarto elemento con fondo verde */
+	background-color: green;
+}
+
+#galeria div.caja:nth-last-child(-n+3){ /* Tres últimos elementos con fondo azul (sobreescribe el fondo verde) */
+	background-color: blue;
+}
+
+#galeria div.caja:nth-child(4n + 2){ /* Elementos 2 y 6 desaparecen dejando hueco */
+	visibility: hidden;
+}
+
+#galeria div.caja:nth-child(4n){ /* Elementos múltiplos de 4 desaparecen sin dejar hueco */
+	display: none;
+}
+
+/* Otra opción 
+
+#galeria div.caja:nth-child(2n){ 
+	visibility: hidden;
+}
+
+#galeria div.caja:nth-child(4n){
+	display: none;
+}*/
+
+

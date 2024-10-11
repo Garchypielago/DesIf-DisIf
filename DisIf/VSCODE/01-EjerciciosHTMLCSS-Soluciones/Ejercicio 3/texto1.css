@@ -1,0 +1,46 @@
+p:first-of-type{
+	font-weight: bold;
+	font-style: italic;
+	text-indent: 2em;
+}
+
+h3 {
+	color: #F9F6C3;
+	background-color: #AC8159;
+}
+
+table{
+	width: 100%;
+}
+
+.clase {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold;
+	color: #755E8B;		
+}
+
+#idparaestilo {
+	background-color: #9786A8;
+	letter-spacing: 5px;
+	color: #FFF;
+	word-spacing: 0.7em;
+}
+
+#consejo {
+	font-family: Tahoma, Geneva, sans-serif;
+	background-color: #CECA85;
+	font-weight: bold;
+	color: #442A5D;
+	text-align: justify;
+}
+
+#textolinea {
+	background-color: #F9DDC3;
+	text-decoration: underline;
+	color: #442A5D; 
+	text-transform: capitalize;
+	font-variant: small-caps;
+	font-family: Verdana, Geneva, sans-serif;
+}

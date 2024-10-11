@@ -1,0 +1,27 @@
+* {
+  margin: 0 10px;
+}
+
+/* Creamos el div container para evitar utilizar selectores de etiquetas */
+div#container h1 {
+  border: 2px solid #00F;
+  padding: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+div#container h2 {
+  border: 2px solid #AAA;
+  padding-left: 0.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+div#container ul {
+  border: 2px solid #0F0;
+}
+
+/* En la imagen con la solución se puede observar que el primer li no tiene margen y esta sería una forma de lograrlo */
+div#container li + li {
+  margin-top: 1em;
+}

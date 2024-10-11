@@ -1,0 +1,58 @@
+table.ejercicio {
+  font: .9em Arial, Helvetica, sans-serif;
+  border: 1px solid #333;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Solo aplica a la primera fila */
+table.ejercicio tr.cabecera th {
+  background: #F5F5F5 url(imagenes/fondo_gris.gif) repeat-x;
+}
+
+table.ejercicio tr{
+   height: 4em;
+   vertical-align: bottom;
+}
+
+table.ejercicio thead th {
+  text-align: center;
+}
+
+table.ejercicio th.euro {
+  background: url(imagenes/euro.png) no-repeat left top;
+} 
+
+table.ejercicio th.dolar {
+  background: url(imagenes/dolar.png) no-repeat left top;
+}
+
+table.ejercicio th.libra {
+  background: url(imagenes/libra.png) no-repeat left top;
+}
+
+table.ejercicio th.yen {
+  background: url(imagenes/yen.png) no-repeat left top;
+}
+
+/* En este caso background-color de los th va después para evitar que background
+ * sobreescriba a esta propiedad */
+table.ejercicio th.moneda {
+  padding: 0 .3em 0 1.2em;	
+  background-color: #E6F3FF 
+}
+
+table.ejercicio th, table.ejercicio td {
+  border: 1px solid #333;
+  line-height: 2em;
+}
+
+tr:nth-of-type(odd) {
+  background-color:#FFFFCC;
+}
+
+/* Aplica a todos los tr excepto los que tienen imágenes de fondo porque el selector es 
+ * más específico */
+table.ejercicio tr:hover td {
+  background: #FFFF66;
+}
