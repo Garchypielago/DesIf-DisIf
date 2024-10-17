@@ -1,0 +1,31 @@
+.test {
+  background-color: aquamarine; 
+  margin-bottom: 30px;
+}
+
+ul, li {
+  padding: 0; 
+  list-style: none;
+}
+
+/* Para lograr el objetivo del ejercicio tenemos que distribuir el contenedor en columna */
+.flexcenter {
+  display: flex;
+  flex-direction: column-reverse; /* Además se piden los elementos en orden inverso */
+  justify-content: space-between; /* El eje principal es el vertical */
+  align-items: center; /* El eje secundario es el horizontal */
+  height: 31rem;
+}
+
+div.test ul li {
+  display: flex; /* Para centrar el texto dentro de cada ítem podemos a su vez convertirlo en un contenedor flex */
+  justify-content: center;
+  align-items: center;
+  
+  width: 18%;     
+  background-color: orangered;
+  height: 3em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;	
+}

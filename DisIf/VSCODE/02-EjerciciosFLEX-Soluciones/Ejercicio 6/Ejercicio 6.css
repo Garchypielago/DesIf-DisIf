@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 20px auto;
+  width: 80%;
+}
+
+div.container header {
+  background-color: #bbb;
+  display: flex;
+  padding: 1em;
+}
+
+/* La suma del tamaño de los ítems supera al tamaño del contenedor 
+	De esta forma, si no aplicamos factor de decrecimiento se desbordará */
+div.container header div {
+  background-color: burlywood;
+  border: 1px solid black;
+  padding: 1em;
+  
+  flex-basis: 28%;
+  flex-shrink: 0;
+}
+
+/* Cambiando el orden de los elementos flexibles (el tercero va el primero porque por defecto es order 0) */
+div.container header :nth-child(1) {
+  order: 2;  
+}
+
+div.container header :nth-child(2) {
+  order: 2;
+}
+
+div.container header :nth-child(4) {
+  order: 1;
+}
+
+div.container footer {
+  background-color: cadetblue;
+  display: flex;
+  height: 200px;
+  padding: 2em;
+  margin-top: 2em;
+}
+
+div.container footer div {
+  background-color: burlywood;
+  border: 1px solid black;
+  height: 150px;
+  flex-basis: 50%;
+}
+
+/* Con flex-shrink, el espacio sobrante se resta de este ítem al tener mayor factor de decrecimiento
+	El resto tiene flex-shrink: 1 que por defecto reparte el espacio equitativamente */
+div.container footer :nth-child(2) {  
+  flex-shrink: 5;
+}

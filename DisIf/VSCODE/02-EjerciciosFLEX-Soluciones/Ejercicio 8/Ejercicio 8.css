@@ -1,0 +1,70 @@
+/* Etiquetas principales con borde negro */
+header,article,main,aside,footer,div {
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+}
+
+/* Contenedor principal con flex-direction column que nos facilita el diseño y espaciado */
+#flexcontainer{
+	min-width: 500px;
+	max-width: 1200px;
+	width: 80vw;
+	height: 70vh;
+	min-height: 500px;
+	padding: 1em;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1em;
+}
+
+/* Dimensiones de cabecera y pie de página con flex-grow para ocupar todo el espacio disponible y ajustando al 10% del alto */
+#flexcontainer header, #flexcontainer footer{
+	flex: 1 10%;	
+}
+
+/* Incluye los tres ítems del contenido principal de la página: aside, article y main */ 
+#subcontainer{
+	flex: 1 80%;
+	padding: 1em;
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 1em;	
+}
+
+/* Elementos situados a la izquierda en el contenido principal y aprovechando el alto máximo con flex-grow: 1 */
+#subcontainer aside{
+	flex: 1 20%;
+}
+
+#subcontainer article{
+	flex: 1 70%;
+}
+
+/* Contenedor con las cajas azules y las propiedades de alineación para cumplir los requisitos del enunciado */
+/* MIRAR EN RESOLUCIONES PEQUEÑAS. No se podría aplicar y habría que cambiar el diseño o emplear media queries según dispositivo */
+#subcontainer main{
+	flex: 1 100%;
+	
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: flex-end;
+	gap: 1em;
+}
+
+/* Cada caja azul ocupa el 20% */
+.caja-flex{
+	border: 1px dotted blue;
+	height: fit-content;
+	min-height: 3rem;
+	flex: 0 1 20%;
+}

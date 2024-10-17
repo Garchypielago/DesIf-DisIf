@@ -1,0 +1,153 @@
+* {
+	text-decoration: none;
+	color: black;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+#menu {
+	background-color: black;
+
+}
+
+#menu ul li ul {
+	background-color: white;
+}
+
+#menu>ul>li {
+	display: inline-block;
+	position: relative;
+
+}
+
+#menu>ul>li>a {
+	display: block;
+	padding: 1em;
+	color: white;
+	font-weight: bold;
+
+}
+
+/*hover*/
+
+
+#menu ul li ul {
+	/*display: none;*/
+	visibility: hidden;
+	opacity: 0;
+
+	position: absolute;
+	top: 45px;
+	left: 15px;
+
+	border: 1px solid #777;
+
+	width: 200px;
+	padding: 20px 0;
+	border-radius: 15px;
+	-webkit-box-shadow: 3px 2px 17px -3px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: 3px 2px 17px -3px rgba(0, 0, 0, 0.65);
+	box-shadow: 3px 2px 17px -3px rgba(0, 0, 0, 0.65);
+	z-index: 30;
+
+	transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+
+	transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+
+}
+
+/*hover*/
+
+
+.separador {
+	border-top: 1px solid #777;
+	margin: 5px 0;
+}
+
+#menu ul li ul li a {
+	display: block;
+
+	padding: 0.5em 1em;
+}
+
+#menu ul li ul li {
+	position: relative;
+}
+
+#menu ul li ul li.submenu:after {
+	content: "";
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 5px solid black;
+	border-bottom: 5px solid transparent;
+	position: absolute;
+	top: 10px;
+	left: 170px;
+	transition: transform 0.3s ease;
+}
+
+/*hover*/
+
+
+
+
+/*hover*/
+
+
+#menu ul li ul li ul {
+	left: 180px;
+	top: -10px;
+	border: 1px solid #777;
+	border-radius: 15px;
+	z-index: 1000;
+
+}
+
+#menu>ul>li>ul:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-right: 10px solid transparent;
+	border-top: 10px solid transparent;
+	border-left: 10px solid transparent;
+	border-bottom: 10px solid white;
+	position: absolute;
+	top: -20px;
+	left: 30px;
+
+}
+
+/* Seguimiento del profe */
+
+#menu>ul>li:hover>a {
+	background-color: tomato;
+}
+
+#menu>ul li:hover ul {
+	/* en la parte de arriba si juegas se ve que solo necesitas visibility o opacity ;) */
+	visibility: visible;
+	opacity: 1;
+
+	transform: scale(1);
+	/* -webkit-transform: scale(1); */
+}
+
+#menu ul li ul li.submenu:hover:after {
+	border-left: 5px solid white;
+	transform: rotate(90deg);
+}
+
+#menu ul li ul li:hover > a{
+	background-color: rgb(255, 86, 56);
+	color: white;
+}
+
+

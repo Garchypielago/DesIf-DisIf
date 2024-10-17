@@ -1,0 +1,26 @@
+
+.paginacion {
+    display: inline-block;
+}
+
+.paginacion a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+.paginacion a:last-child, .paginacion a:first-child{
+    color:blue;
+}
+
+.paginacion a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+.paginacion a:focus:not(:last-child, :first-child) {
+    background-color: #0000ff;
+    color: white;
+    border-radius: 5px;
+}
