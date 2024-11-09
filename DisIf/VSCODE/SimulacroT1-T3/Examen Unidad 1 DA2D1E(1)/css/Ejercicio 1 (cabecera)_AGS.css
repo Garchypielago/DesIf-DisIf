@@ -1,0 +1,31 @@
+div, header{
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    height: 8rem;
+    border: 2px solid black;
+    padding: 1rem 0rem 1rem 1rem;
+    background-color: rgb(140, 194, 211);
+    text-align: right;
+    position: sticky;
+    top: 0;
+    margin-bottom: 0.5em;
+}
+
+div {
+    border: 1px solid gray;
+    height: 200px;
+    overflow: auto;
+    font-size: small;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+	text-align: center;
+	float: right;
+}
