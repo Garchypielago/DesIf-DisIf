@@ -1,0 +1,105 @@
+/* 
+Realiza el diseño que se muestra en la imagen de debajo aplicando la metodología 
+flex lo máximo posible, especialmente en los siguientes elementos: 
+• El contenedor principal tiene tres componentes: cabecera (ancho 80%), 
+contenido principal y pie de página y un borde externo. Los tres 
+componentes, aunque están uno debajo de otro, se distribuyen mediante 
+las propiedades de flex.  
+• El contenido principal tiene 4 cajas: 
+o 3 a la izquierda (todas son iguales) con un ancho de un 20%, y con la 
+misma separación entre ellas y los bordes de arriba y abajo 
+o Un contenedor más grande con el resto del espacio con cajas rojas, 
+teniendo 3 en la primera columna, 2 en la segunda y una única en la 
+tercera que ocupará las 2 filas 
+El borde externo es más grueso que los internos
+*/
+*{
+    color: red;
+}
+/* Etiquetas principales con borde negro */
+header,article,main,aside,footer,div {
+	border: 1px solid black;
+	box-sizing: border-box;
+}
+
+header{
+    width: 80%;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+}
+
+/* Contenedor principal con flex-direction column que nos facilita el diseño y espaciado */
+#flexcontainer{
+	min-width: 500px;
+	max-width: 1200px;
+	width: 80%;
+	min-height: 500px;
+	padding: 1em;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	
+	gap: 1em;
+
+    
+	border: 4px solid black;
+	box-sizing: border-box;
+}
+
+/* Dimensiones de cabecera y pie de página con flex-grow para ocupar todo el espacio disponible y ajustando al 10% del alto */
+#flexcontainer header, #flexcontainer footer{
+	flex: 1 10%;	
+}
+
+/* Incluye los tres ítems del contenido principal de la página: aside, article y main */ 
+#subcontainer{
+	flex: 1 80%;
+	padding: 1em;
+	
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	
+	gap: 1em;	
+}
+
+/* Elementos situados a la izquierda en el contenido principal y aprovechando el alto máximo con flex-grow: 1 */
+#subcontainer aside, #subcontainer article{
+	flex: 1 calc((100% / 3) - 1em);
+	width: 20%;
+}
+
+/* Contenedor con las cajas azules y las propiedades de alineación para cumplir los requisitos del enunciado */
+/* MIRAR EN RESOLUCIONES PEQUEÑAS. No se podría aplicar y habría que cambiar el diseño o emplear media queries según dispositivo */
+#subcontainer main{
+	gap: 1em;
+	width: 75%;
+
+	display: flex;
+    flex-direction: column;
+	flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: 1em;
+
+    padding: 6em 2em 1em 2em;
+
+	flex: 1 100%;
+}
+
+/* Cada caja azul ocupa el 20% */
+.caja-flex{
+	border: 1px solid red;
+	min-height: 4rem;
+	width: 20%;
+	flex: 0 0 30%;
+}
+
+#subcontainer main .caja-flex:nth-child(6){
+	flex-basis: 60%;
+
+}
+
