@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.headerContainer {
+    background-color: #c62828;
+    color: #fff;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    size: 1.8em;
+}
+
+.enlacesSuperior {
+    display: flex;
+    gap: 20px;
+}
+
+
+.regalosContainer {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.regalo {
+    background-color: #80cbc4;
+    padding: 15px;
+    margin: 10px;
+    /* flex-basis: 25%; */
+    /* felx: growth(agranda) shrink(achata) basis(define) */
+    flex: 1 0 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.r1 {
+    background: url(../img/imagen1.jpg);
+}
+
+.r2 {
+    background: url(../img/imagen2.jpg);
+}
+
+.r3 {
+    background: url(../img/imagen3.jpg);
+}
+
+.r4 {
+    background: url(../img/imagen4.jpg);
+}
+
+.r5 {
+    background: url(../img/imagen5.jpg);
+}
+
+.r6 {
+    background: url(../img/imagen6.jpg);
+}
+
+.r7 {
+    background: url(../img/imagen7.jpg);
+}
+
+.r8 {
+    background: url(../img/imagen8.jpg);
+}
+
+.r9 {
+    background: url(../img/imagen9.jpg);
+}
+
+/* esto necesita ir debajo de lo anterior (cascada) */
+.r {
+    height: 300px;
+    width: 400px;
+    background-size: 400px 300px;
+    background-repeat: no-repeat;
+}
+
+/* esto no lo hemos visto */
+/* .regalo:hover{
+    animation: 0.3s ease;
+} */
+
+.somosContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.fotoEncarni {
+    background: url(../img/encarni.webp);
+}
+
+.fotoPapaNoel {
+    background: url(../img/papanoel.avif);
+}
+
+.foto {
+    margin: 10px;
+    height: 300px;
+    width: 400px;
+    background-size: 400px 300px;
+    background-repeat: no-repeat;
+}
+
+.footerContainer {
+    background-color: #c62828;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
