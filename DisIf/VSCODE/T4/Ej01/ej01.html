@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <picture>
+    <source 
+        media="(min-width: 1400px)" 
+        sizes="(min-width: 1600px) 300vw, 1200px"
+        srcset="img/charmander.jpeg 1200w"
+        type="image/jpeg">
+
+    <source 
+        media="(min-width: 800px)" 
+        sizes="(min-width: 1200px) 300vw, 1200px"
+        srcset="img/squirtle.jpeg 1200w""
+        type="image/jpeg">
+
+    <img src="img/bulbasaur.jpeg" alt="Pokemon" >
+</picture>
+<br>
+<picture>
+    <source 
+        media="(min-width: 1200px)" 
+        sizes="(min-width: 1600px) 70vw, 1200px"
+        srcset="img/paisaje_grande.webp 1200w"
+        type="image/webp">
+
+    <source 
+        media="(min-width: 1200px)" 
+        sizes="(min-width: 1600px) 70vw, 1200px"
+        srcset="img/paisaje_extra_grande.jpg 1600w,
+            paisaje_grande.jpg 1200w"
+        type="image/jpg">
+
+    <source media="(min-width: 800px)" srcset="img/paisaje_mediano.webp" type="image/webp">
+    <source media="(min-width: 800px)" srcset="img/paisaje_mediano.jpg" type="image/jpg">
+
+    <img src="img/bulbasaur.jpeg" alt="Paisaje">
+</picture>
+
+</body>
+
+</html>
