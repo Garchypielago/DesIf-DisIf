@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 1000px;
+            height: 600px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        #dvd {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-image: url(bronzor.gif);
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+            position: absolute;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-name: DVD;
+        }
+
+        @keyframes DVD {
+            25%{
+                background-image: url(bronzor-s.gif);
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            50%{
+                background-image: url(bronzor.gif);
+                top: 50%;
+                left: calc(100% - 110px); /* restamos ancho menos anchoimagen*/
+                transform: translateY(-50%);
+            }
+            75%{
+                background-image: url(bronzor-s.gif);
+                top: calc(100% - 110px);
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            100%{
+                background-image: url(bronzor.gif);
+                top: 50%;
+                left: 0; /* restamos ancho menos anchoimagen*/
+                transform: translateY(-50%);
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="dvd"></div>
+    </div>
+
+</body>
+
+</html>

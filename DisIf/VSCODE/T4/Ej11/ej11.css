@@ -1,0 +1,38 @@
+#container {
+    height: 600px;
+    border: 1px solid black;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.caja{
+    width: 150px;
+    height: calc(100% / 4);
+    background-color: red;
+    transition: 2s;
+}
+
+.caja:hover{
+    transform: scale(50%);
+    background-color: blue;
+    rotate: 270deg;
+    color: yellow;
+    font-size: 150%;
+}
+
+button{
+    margin: 20px;
+    padding: 10px;
+}
+
+#derecha:focus{
+
+}
+
+#inicio:focus{
+
+}

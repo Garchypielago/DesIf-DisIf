@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #images{
+            width: 500px;
+            height: 300px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-image: url(HTML5.png);
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-name: Galeria;
+        }
+
+        @keyframes Galeria{
+            from{background-image: url(HTML5.png)}
+            
+            25%{background-image: url(Javascript.png)}
+            
+            50%{background-image: url(CSS3.png)}
+            
+            75%{background-image: url(PHP.png)}
+            
+            to {background-image: url(HTML5.png);}
+        }
+
+        #images2{
+            width: 500px;
+            height: 300px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-image: url(charmander.jpeg);
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-name: Pokemones;
+        }
+
+        @keyframes Pokemones{
+            from{background-image: url(charmander.jpeg)}
+            
+            33%{background-image: url(squirtle.jpeg)}
+            
+            66%{background-image: url(bulbasaur.jpeg)}
+            
+            to {background-image: url(charmander.jpeg);}
+        }
+    </style>
+</head>
+<body>
+    <div id="images2"></div>
+    <div id="images"></div>
+</body>
+</html>
