@@ -1,19 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="ej11.css">
+    <link rel="stylesheet" href="ej11 copy.css">
 </head>
+
 <body>
     <div id="container">
-        <div class="caja">item 1</div>
-        <div class="caja">item 2</div>
-        <div class="caja">item 3</div>
-        <div class="caja">item 4</div>
+        <div id="c1" class="caja">Item 1</div>
+        <div id="c2" class="caja">Item 2</div>
+        <div id="c3" class="caja">Item 3</div>
+        <div id="c4" class="caja">Item 4</div>
     </div>
-    <button id="derecha">Desplaza a la derecha e intercala</button>
-    <button id="inicio">Volver a la posicion inicial</button>
+    <button id="derechaBtn" onclick="derecha();">Desplaza a la derecha e intercala</button>
+    <button id="inicioBtn" onclick="inicio();">Volver a la posicion inicial</button>
+
+    <script>
+
+        let der = false; 
+
+        function derecha() {
+            const container = document.getElementById("container");
+            let ancho = container.offsetWidth;
+
+            document.querySelectorAll(".caja").forEach((caja) => {
+                caja.style.left = (ancho - 160) + "px";
+            })
+
+            document.getElementById("c1").style.top = "calc(550px * 1 / 4 + 25px)";
+            document.getElementById("c2").style.top = "calc(550px * 0 / 4 + 10px)";
+            document.getElementById("c3").style.top = "calc(550px * 3 / 4 + 55px)";
+            document.getElementById("c4").style.top = "calc(550px * 2 / 4 + 40px)";
+            der = true;
+        }
+
+        function inicio() {
+            document.querySelectorAll(".caja").forEach((caja) => {
+                caja.style.left = "10px";
+            })
+
+            document.getElementById("c1").style.top = "calc(550px * 0 / 4 + 10px)";
+            document.getElementById("c2").style.top = "calc(550px * 1 / 4 + 25px)";
+            document.getElementById("c3").style.top = "calc(550px * 2 / 4 + 40px)";
+            document.getElementById("c4").style.top = "calc(550px * 3 / 4 + 55px)";
+            der = false;
+        }
+
+        window.addEventListener("resize", () => {
+            if (der){
+                derecha();
+            } else {
+                inicio();
+            }
+        });
+    </script>
 </body>
+
 </html>

@@ -1,0 +1,16 @@
+
+    <div class="test">
+        <ul class="flexend1">
+            <ng-container *ngFor="let num1 of [1,2,3,4,5]; let i1=index">
+                <li  *ngIf="i1!=0">{{num1}}</li>
+            </ng-container>
+        </ul>
+    </div>
+
+    <div class="test">
+        <ul class="flexend2">
+            <ng-container *ngFor="let num2 of [1,2,3,4,5]; let i2=index">
+                <li  *ngIf="i2!=0">{{num2}}</li>
+            </ng-container>
+        </ul>
+    </div>

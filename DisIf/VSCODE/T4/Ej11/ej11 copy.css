@@ -1,0 +1,56 @@
+html{
+    background-color: rgb(65, 65, 65);
+}
+
+#container {
+    height: 600px;
+    border: 1px solid black;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.caja{
+    width: 150px;
+    height: calc(600px / 4 - 10px);
+    background-color: red;
+    transition: 3s all 0.5s ease-in-out;
+    position: absolute;
+    left: 10px;
+}
+
+#c1 {
+    top: calc(550px * 0 / 4 + 10px);
+}
+#c2 {
+    top: calc(550px * 1 / 4 + 25px);
+}
+#c3 {
+    top: calc(550px * 2 / 4 + 40px);
+}
+#c4 {
+    top: calc(550px * 3 / 4 + 55px);
+}
+
+.caja:hover {
+    width: 75px;
+    height: calc((600px / 4 - 10px) / 2);
+    background-color: blue;
+    transform: rotate(270deg);
+    color: yellow;
+    font-size: 150%;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+}
+
+#derecha:focus{
+
+}
+
+#inicio:focus{
+
+}

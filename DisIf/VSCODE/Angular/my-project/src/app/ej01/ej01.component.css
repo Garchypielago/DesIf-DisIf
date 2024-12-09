@@ -1,0 +1,39 @@
+:root{
+    --alto:12.5rem;
+}
+
+div.test {
+    height: var(--alto);
+    background-color: aquamarine;
+}
+
+ul, li {
+    list-style-type: none;
+    padding: 0%;
+}
+
+div.test ul li {
+    background-color: orangered;
+    width: 18%;
+    color: white;
+    text-align: center;
+    line-height: 3em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.flexend1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: var(--alto);
+}
+
+.flexend2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: var(--alto);
+}
