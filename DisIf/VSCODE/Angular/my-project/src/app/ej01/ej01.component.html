@@ -1,8 +1,16 @@
-
+<div style="margin-bottom: 2rem;">
     <div class="test">
         <ul class="flexend1">
             <ng-container *ngFor="let num1 of [1,2,3,4,5]; let i1=index">
-                <li  *ngIf="i1!=0">{{num1}}</li>
+                <li [ngClass]="varColor ? 'defColor' : 'chnColor' " *ngIf="i1!=0">{{num1}}</li>
+            </ng-container>
+        </ul>
+    </div>
+
+    <div class="test">
+        <ul class="flexend1">
+            <ng-container *ngFor="let num1 of numbers; let i1=index">
+                <li class="defColor" [ngClass]="{'chnColor':varColor}" *ngIf="i1!=4">{{num1}}</li>
             </ng-container>
         </ul>
     </div>
@@ -10,7 +18,36 @@
     <div class="test">
         <ul class="flexend2">
             <ng-container *ngFor="let num2 of [1,2,3,4,5]; let i2=index">
-                <li  *ngIf="i2!=0">{{num2}}</li>
+                <li class="defColor" [ngClass]="{'chnColor':!varColor}" *ngIf="i2!=0">{{num2}}</li>
             </ng-container>
         </ul>
     </div>
+
+    <div class="test">
+        <ul class="flexend2">
+            <ng-container *ngFor="let num2 of numbers; let i2=index">
+                <li [ngClass]="varColor ? 'chnColor' : 'defColor' " *ngIf="i2!=4">{{num2}}</li>
+            </ng-container>
+        </ul>
+    </div>
+
+    <button type="button" (click)="changeColor()">Intercalar colores</button>
+</div>
+
+<hr>
+
+<div style="margin-bottom: 2rem;">
+    <label>Type something:
+        <input #customerInput (input)="0">{{customerInput.value}}
+    </label>
+    <!-- Hello, Padma -->
+    <h1>Hello, {{customer}}</h1>
+    <ul>
+        <!-- Ebony and Chiho in a list-->
+        <li *ngFor="let customer of customers">{{ customer.value }}</li>
+    </ul>
+    
+    <label>Press shift t:
+        <input (keydown)="onKeydown($event)">
+    </label>
+</div>
