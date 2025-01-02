@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Output, Input } from '@angular/core';
 @Component({
   selector: 'app-ej01',
   templateUrl: './ej01.component.html',
@@ -12,6 +11,9 @@ export class Ej01Component implements OnInit {
   customers = [{value: 'Ebony'}, {value: 'Chiho'}];
   customer = 'Padma';
 
+  @Input() ejemploInput : String = ""; 
+  @Output() ejemploOutput : Array<String> = ["Hola user", "Prueba a añadir otro elemento"];
+  
   constructor() { }
 
   ngOnInit(): void {

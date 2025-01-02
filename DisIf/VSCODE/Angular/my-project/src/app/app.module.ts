@@ -13,6 +13,6 @@ import { Ej01Component } from './ej01/ej01.component';
     BrowserModule
   ],
   providers: [],
-  bootstrap: [Ej01Component]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

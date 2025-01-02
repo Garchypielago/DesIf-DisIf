@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-project';
-  ejemploInput = "El input funciona pana";
-
-  // ejemploOutput : Array<String> | undefined;
+  title = 'Tour of Heroes';
 }
