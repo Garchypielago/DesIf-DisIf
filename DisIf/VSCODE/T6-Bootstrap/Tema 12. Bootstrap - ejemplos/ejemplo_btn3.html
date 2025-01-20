@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.col, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-12{border:1px solid;}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<form>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary  btn-sm" type="button">btn-sm : tamaño pequeño</button>
+      <button class="btn btn-primary btn-lg" type="button">btn-lg : tamaño grande</button>
+      <button class="btn btn-primary btn-lg" type="button">tamaño normal</button>
+
+    </div>  
+    <hr>
+    <div class="d-grid gap-2 d-md-block">
+      <button class="btn btn-primary" type="button">Button</button>
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+    <hr>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-primary me-md-2" type="button">Button</button>
+      <button class="btn btn-primary" type="button">Button</button>
+    </div>
+          <hr>
+    <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
+    <button type="button" class="btn btn-primary active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+    <button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+    <hr>
+    <a href="#" class="btn btn-primary" role="button" data-bs-toggle="button">Toggle link</a>
+    <a href="#" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true">Active toggle link</a>
+    <a href="#" class="btn btn-primary disabled" tabindex="-1" aria-disabled="true" role="button" data-bs-toggle="button">Disabled toggle link</a>
+     </form>
+
+  </div> 
+</body>
+</html>
