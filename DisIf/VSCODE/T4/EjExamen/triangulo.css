@@ -1,0 +1,74 @@
+body {
+    margin: 3em 10%;
+    background: white;
+}
+
+.electrodediv{
+    width: 400px;
+    height: 400px;
+    background-image: url(azul.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.electrodediv {
+    animation-name: Girar;
+    animation-duration: 7s;
+    animation-iteration-count: 6;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: forwards; */
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.electrodediv:hover{
+    animation-play-state: paused;
+}
+
+@keyframes Girar {
+    0%{
+        transform: rotate(0);
+        width: 400px;
+        height: 400px;
+    }
+    100%{
+        transform: rotate(1turn);
+        background-image: url(rojo.png);
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.electrodediv2{
+    width: 200px;
+    height: 200px;
+    background-image: url(rojo.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.electrodediv2 {
+    animation-name: Girar2;
+    animation-duration: 7s;
+    animation-iteration-count: 6;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: forwards; */
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.electrodediv2:hover{
+    animation-play-state: paused;
+}
+
+@keyframes Girar2 {
+    0%{transform: translateX(0) rotate(0);
+        width: 200px;
+        height: 200px;}
+    100%{
+        transform: translateX(500px) rotate(1turn);
+        background-image: url(azul.png);
+        width: 400px;
+        height: 400px;
+    }
+}

@@ -30,8 +30,9 @@ public class HelloWorld03 extends Application {
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
+
         Text scenetitle = new Text("Welcome");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        scenetitle.setId("welcome-text");
         grid.add(scenetitle, 0, 0, 2, 1);
 
         Label userName = new Label("User Name:");
@@ -47,6 +48,7 @@ public class HelloWorld03 extends Application {
         grid.add(pwBox, 1, 2);
 
         Button btn = new Button("Sign in");
+        btn.getStyleClass().add("button");
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
         hbBtn.getChildren().add(btn);
@@ -54,6 +56,7 @@ public class HelloWorld03 extends Application {
 
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
+        actiontarget.setId("actiontarget");
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
 
