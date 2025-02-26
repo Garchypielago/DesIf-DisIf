@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar>
+        <menus>
+          <Menu text="_File">
+            <items>
+                  <MenuItem text="New..." />
+                  <CustomMenuItem mnemonicParsing="false" text="Slider">
+                     <content>
+                        <Slider />
+                     </content>
+                  </CustomMenuItem>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem disable="true" mnemonicParsing="false" text="Delete" />
+                  <MenuItem mnemonicParsing="false" text="Copy">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <CheckMenuItem mnemonicParsing="false" text="Do automaticallly" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+                  <RadioMenuItem mnemonicParsing="false" text="Update">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="update" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" text="Not update" toggleGroup="$update" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Haz click derecho para más información..." BorderPane.alignment="CENTER">
+         <contextMenu>
+            <ContextMenu autoHide="false" hideOnEscape="false">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Copiar" />
+                  <MenuItem mnemonicParsing="false" text="Pegar" />
+                  <MenuItem disable="true" mnemonicParsing="false" text="Borrar" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextArea>
+   </center>
+</BorderPane>

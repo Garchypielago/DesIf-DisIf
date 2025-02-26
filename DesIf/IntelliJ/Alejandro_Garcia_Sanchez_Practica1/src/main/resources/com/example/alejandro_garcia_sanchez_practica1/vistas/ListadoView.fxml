@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableColumn?>
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" fx:controller="com.example.alejandro_garcia_sanchez_practica1.controladores.ListadoController">
+    <Label text="Listado de Empleados" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10">
+        <ComboBox fx:id="comboFiltroDepartamento" promptText="Filtrar por departamento"/>
+<!--        <ComboBox fx:id="comboOrdenar" promptText="Ordenar por"/>-->
+    </HBox>
+
+    <TableView fx:id="tablaEmpleados">
+        <columns>
+            <TableColumn fx:id="columnaNombre" text="Nombre"/>
+            <TableColumn fx:id="columnaApellido" text="Apellido"/>
+            <TableColumn fx:id="columnaDepartamento" text="Departamento"/>
+            <TableColumn fx:id="columnaFecha" text="Fecha Contratación"/>
+            <TableColumn fx:id="columnaActivo" text="Activo"/>
+        </columns>
+    </TableView>
+
+</VBox>

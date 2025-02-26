@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+       .im{
+           position: relative;
+           top: 0;
+           left: 50%;
+           transform: translate(-50%);
+           width: 20%;
+           height: 20%;
+           background-repeat: no-repeat;
+           background-image:  url("img/javascript-logo.png");
+           background-size: contain;
+           animation: cambio 5s infinite ease-in;
+       } 
+
+       @keyframes cambio {
+           25% { background-image: url("img/css.svg"); top: 50%; left: 0; transform: translate(0, -50%);}
+           50% { background-image: url("img/Galvin.png");  top: 100%; left: 50%; transform: translate(-50%, -100%);}
+           75% { background-image: url("img/html.png"); top: 50%; left: 100%; transform: translate(-50%, -50%);}
+       }
+    </style>
+</head>
+<body>
+    <div class="im">
+    </div>
+</body>
+</html>

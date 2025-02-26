@@ -1,0 +1,60 @@
+body {
+    margin: 3em 10%;
+    background: white;
+}
+
+.cuadrado {
+    width: 150px;     
+    height: 150px;        
+    background: yellow;     
+    border: 1px solid #000; 
+}
+
+.cuadrado {
+    animation-name: Girar;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.cuadrado:hover{
+    animation-play-state: paused;
+}
+
+@keyframes Girar {
+    0%{
+        transform: rotate(0);
+        width: 150px;
+        height: 150px;
+    }
+    50%{
+        background: red;
+        width: 300px;
+        height: 300px;
+    }
+    100%{
+        background: blue;
+        transform: rotate(1turn);
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+.titulo{
+    color: black;
+    border: 1px solid black;
+    width: 200px;
+    transition-property: color, box-shadow;
+    transition-delay: 0.5s;
+    transition-duration: 4s;
+}
+
+.titulo:hover{
+    color :red;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 1);
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml">
+    <content>
+        <VBox spacing="15">
+            <TitledPane text="Cómo usar el listado">
+                <Label text="1. Seleccione un filtro del combo box\n2. Haga doble click para editar"/>
+            </TitledPane>
+
+            <TitledPane text="Cómo editar registros">
+                <Label text="1. Complete todos los campos\n2. Pulse Guardar para confirmar"/>
+            </TitledPane>
+
+            <TitledPane text="Exportar datos">
+                <Label text="Use el menú Archivo > Exportar para guardar"/>
+            </TitledPane>
+        </VBox>
+    </content>
+</ScrollPane>
+

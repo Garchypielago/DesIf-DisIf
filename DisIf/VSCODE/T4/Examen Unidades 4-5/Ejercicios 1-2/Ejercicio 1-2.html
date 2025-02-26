@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Examen parcial 2ª Evaluación</title>
+	<link rel="stylesheet" href="estilos1.css" />
+
+</head>
+<body>	
+	<!-- Contenedor principal -->			
+	<main id="wrapper">	
+		<!-- Subcabecera para incluir la imagen -->
+		<nav id="cabecera">
+			<!-- Aquí va la etiqueta picture -->
+			<picture>
+				<source
+					media="(min-width: 1200px)"
+					sizes="(min-width: 1200px)70vw"
+					srcset="img/img_1600.webp 1600w,
+						img/img_1200.webp 1200w"
+					type="image/webp"/>
+
+				<source
+					media="(min-width: 600px)"
+					sizes="(min-width: 1200px)75vw, (min-width: 1000px)85vw"
+					srcset="img/img_1200.webp 1200w,
+						img/img_800.webp 800w"
+					type="image/webp"/>
+
+				<source
+					srcset="img/img_400.webp"
+					type="image/webp">
+
+				<img
+					src="img/img_800.png" alt="Prueba en navegadores antiguos"/>		
+			</picture>
+		</nav>			
+			
+		<!-- Sección para contenidos audiovisuales -->
+		<section id="multimedia">	
+			<!-- Elemento donde se incluye el audio -->
+			<article id="audio" class="caja">
+				<!-- Aquí va la etiqueta audio -->
+				
+				<audio id="player" autoplay loop preload="auto">
+					<source src="audio/fondo.ogg" type="audio/ogg" />
+					<source src="audio/fondo.mp3" type="audio/mpeg" />
+					<object type="application/x-shockwave-flash" data="player_mp3_mini.swf" width="200" height="20">
+						<param name="movie" value="player_mp3_mini.swf" />
+						<param name="bgcolor" value="#085c68" />
+						<param name="FlashVars" value="mp3=audio/fondo.mp3" />
+						<embed href="player_mp3_mini.swf" bgcolor="#085c68" width="200"
+							height="20" name="movie" type="application/x-shockwave-flash" flashvars="mp3=audio/fondo.mp33" >
+						</embed>
+					</object>	
+				</audio>	
+
+				<div>
+					<button onclick="document.getElementById('player').play()">Play</button>
+					<button onclick="document.getElementById('player').pause()">Pause</button>
+				</div>
+
+			</article>
+			
+			<!-- Elemento donde se incluye el vídeo de YouTube -->
+			<article id="video1" class="caja">
+
+				<iframe title="videoExamen" width="420" height="300" src="https://www.youtube.com/embed?listType=playlist&playlist=zu9W8AtZy7U&controls=2&loop=1&autoplay=1" allow="autoplay"></iframe>
+				<!-- Aquí debes modificar los parámetros del vídeo de YouTube -->
+
+
+			</article>
+		</section>
+		
+	</main>	
+
+</body>
+</html>

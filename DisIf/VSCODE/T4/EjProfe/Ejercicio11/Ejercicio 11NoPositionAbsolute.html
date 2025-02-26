@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style type="text/css" media="screen">
+		#container {
+			/* No es necesario calcular el height debido a que sus hijos directos (.pbox) tienen position:static,
+				por tanto, ocuparán el espacio definido en la página para ellos y #container se dimensiona para mostrarlos a todos */
+			border: 1px solid black;
+			width: 40rem; /* Para garantizar el funcionamiento y que todo cuadre damos unidades de medida diferentes a porcentajes */
+			position: relative;
+			margin-bottom: 1em;
+		}
+		.pbox { 
+			width: 6rem;
+			height: 6rem;
+			margin: 1rem;
+			/*position:static, no lo pongo porque es el valor por defecto de la propiedad position.
+					IMPORTANTE: Esto (junto a que el width y height de .pbox no cambia en el hover) es lo que soluciona que al hacer hover no se muevan el resto de cajas, ya que fijamos la posición del contenedor de los .box en su lugar correspondiente
+					dentro de la estructura html*/
+		}
+
+		.box {
+			/* Inicialmente tienen el ancho y alto de su contenedor (.pbox) */
+			width:100%;
+			height: 100%;
+			background-color: red;
+			font-size: 1.5rem;
+			transition: 4s all 0.5s ease-in-out;
+			left: 0px; /* Para que funcione hay que inicializar left */
+		}
+		div.pbox:hover {
+			.box {
+				width: 3rem;
+				height: 3rem;
+				background-color: blue;
+				color: yellow;
+				font-size: 1rem;			
+				transform: rotate(270deg);	
+			}			
+		}
+		
+		div#ex01 { /* Se cuadra cada valor de top teniendo en cuenta márgenes y el alto de cada componente */
+			top: 0rem;			
+		}
+		div#ex02 {
+			top: 7rem;
+		}
+		div#ex03 {
+			top: 14rem;
+		}
+		div#ex04 {
+			top: 21rem;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="pbox">
+			<div id="ex01" class="box">Caja 1</div>
+		</div>
+		<div class="pbox">
+			<div id="ex02" class="box">Caja 2</div>
+		</div>
+		<div class="pbox">
+			<div id="ex03" class="box">Caja 3</div>
+		</div>
+		<div class="pbox">
+			<div id="ex04" class="box">Caja 4</div>
+		</div>
+	</div>
+</body>
+</html>
