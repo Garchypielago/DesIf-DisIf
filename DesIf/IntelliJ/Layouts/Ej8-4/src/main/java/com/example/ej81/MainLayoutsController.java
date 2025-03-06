@@ -10,8 +10,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class MainLayoutsController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
     private ComboBox<Object> ComboBoxLocation;
@@ -32,10 +30,6 @@ public class MainLayoutsController {
     @FXML
     private TreeView<String> TreeViewLeft = new TreeView<>();
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-    }
 
     @FXML
     private void initialize() {
@@ -65,6 +59,5 @@ public class MainLayoutsController {
         TreeViewLeft.setCellFactory(TextFieldTreeCell.forTreeView());
         rootItem.setExpanded(true);
         TreeViewLeft.setRoot(rootItem);
-
     }
 }
