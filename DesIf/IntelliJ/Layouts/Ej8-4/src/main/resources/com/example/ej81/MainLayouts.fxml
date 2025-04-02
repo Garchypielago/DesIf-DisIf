@@ -33,13 +33,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ej81.MainLayoutsController">
+<BorderPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="750.0" styleClass="root" stylesheets="@static/css/ejercicioLayoutAnterior.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ej81.MainLayoutsController">
    <top>
-      <HBox prefHeight="20.0" style="-fx-padding: 15px 12px; -fx-spacing: 10px; -fx-background-color: #336699;" BorderPane.alignment="CENTER">
+      <HBox prefHeight="20.0" style="-fx-padding: 15px 12px; -fx-spacing: 10px; -fx-background-color: #336699;" styleClass="my-stack" BorderPane.alignment="CENTER">
          <children>
             <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Current" />
             <Button mnemonicParsing="false" prefHeight="20.0" prefWidth="100.0" text="Reject" />
-            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Region fx:id="cabecera" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
             <StackPane maxHeight="20.0" maxWidth="-Infinity" minHeight="20.0" minWidth="-Infinity" prefHeight="20.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#62a7d1b1" height="20.0" stroke="BLACK" strokeType="INSIDE" width="20.0" StackPane.alignment="CENTER" />
@@ -50,7 +50,7 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="444.0" prefWidth="151.0" style="-fx-padding: 10px; -fx-spacing: 8px;" BorderPane.alignment="CENTER">
+      <VBox fx:id="izquierda" prefHeight="444.0" prefWidth="151.0" style="-fx-padding: 10px; -fx-spacing: 8px;" BorderPane.alignment="CENTER">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data">
                <font>
@@ -82,7 +82,7 @@
       </VBox>
    </left>
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane styleClass="grid-central" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -153,7 +153,7 @@
       </GridPane>
    </center>
    <bottom>
-      <AnchorPane BorderPane.alignment="BOTTOM_RIGHT">
+      <AnchorPane fx:id="pie" BorderPane.alignment="BOTTOM_RIGHT">
          <children>
             <FlowPane alignment="TOP_RIGHT" columnHalignment="CENTER" layoutX="173.0" layoutY="1.0" minWidth="-Infinity" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="3.0">
                <children>
@@ -165,7 +165,7 @@
       </AnchorPane>
    </bottom>
    <right>
-      <TilePane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TilePane fx:id="derecha" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Accordion prefHeight="192.0" prefWidth="202.0">
               <panes>
