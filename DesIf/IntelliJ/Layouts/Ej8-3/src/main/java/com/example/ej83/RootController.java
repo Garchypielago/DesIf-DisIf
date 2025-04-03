@@ -1,7 +1,6 @@
 package com.example.ej83;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 
 public class RootController {

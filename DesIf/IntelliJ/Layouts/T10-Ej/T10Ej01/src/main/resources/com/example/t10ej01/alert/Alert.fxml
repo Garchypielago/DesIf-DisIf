@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="262.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.t10ej01.alert.AlertController">
+   <children>
+      <Label layoutX="146.0" layoutY="43.0" text="Diálogos" textFill="#3222e1">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <HBox layoutX="64.0" layoutY="106.0" maxHeight="1.7976931348623157E308" prefHeight="25.0" prefWidth="278.0">
+         <children>
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" text="Campo de texto">
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="textInput" promptText="Introduce texto..." HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox layoutX="118.0" layoutY="152.0" prefHeight="40.0">
+         <children>
+            <Button fx:id="infoButton" alignment="CENTER" mnemonicParsing="false" text="Info" HBox.hgrow="ALWAYS" />
+            <Button fx:id="saveButton" mnemonicParsing="false" text="Guardar" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="clearButton" mnemonicParsing="false" text="Limpiar">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mytutorial id="1">
+    <name>Web</name>
+    <descripcion>Curso de web</descripcion>
+    <horas>100</horas>
+    <profesor>
+        <nombre>Miguel</nombre>
+        <apellido1>Alba</apellido1>
+        <apellido2>Pino</apellido2>
+        <experiencia>10</experiencia>
+    </profesor>
+    <contenidos>
+        <tema>JavaScript</tema>
+        <tema>CSS</tema>
+        <tema>Bootstrap</tema>
+    </contenidos>
+</mytutorial>
