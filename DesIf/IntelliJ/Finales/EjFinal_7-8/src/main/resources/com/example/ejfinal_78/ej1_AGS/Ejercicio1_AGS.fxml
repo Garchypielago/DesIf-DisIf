@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- MENÚ SUPERIOR -->
+    <top>
+        <MenuBar>
+            <Menu text="Archivo">
+            <MenuItem mnemonicParsing="false" text="Nuevo" />
+            <Menu mnemonicParsing="false" text="Guardar...">
+               <items>
+                  <RadioMenuItem mnemonicParsing="false" selected="true" text="Automático">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Guardado" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" text="Manual" toggleGroup="$Guardado" />
+               </items>
+            </Menu>
+            </Menu>
+         <Menu text="Ayuda">
+            <items>
+               <MenuItem mnemonicParsing="false" text="Acerca de..." />
+            </items>
+         </Menu>
+        </MenuBar>
+    </top>
+
+    <!-- PANEL CENTRAL: ACCORDION -->
+    <center>
+        <Accordion fx:id="accordion">
+            <panes>
+                <!-- PESTAÑA DATOS FORMULARIO -->
+                <TitledPane text="Datos formulario">
+                    <content>
+                        <GridPane hgap="10" vgap="10">
+                     <Label text="Usuario">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+
+                            <Label text="Rol" GridPane.rowIndex="2">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font></Label>
+                            <HBox prefHeight="17.0" prefWidth="300.0" spacing="10" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                                <RadioButton fx:id="rbAdmin" text="Administrador" textFill="RED" HBox.hgrow="ALWAYS">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="TipoRol" />
+                           </toggleGroup></RadioButton>
+                                <RadioButton fx:id="rbUsuario" selected="true" text="Usuario" textFill="#00ae03" toggleGroup="$TipoRol" HBox.hgrow="ALWAYS" />
+                            </HBox>
+
+                            <Label text="Experiencia" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font></Label>
+                     <Label text="Contraseña" GridPane.rowIndex="1">
+                        <font>
+                           <Font name="System Bold" size="12.0" />
+                        </font>
+                     </Label>
+                     <TextField GridPane.columnIndex="1" />
+                     <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     <Slider blockIncrement="1.0" majorTickUnit="5.0" max="30.0" minorTickCount="4" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     <columnConstraints>
+                        <ColumnConstraints prefWidth="150.0" />
+                        <ColumnConstraints prefWidth="300.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+
+                <!-- PESTAÑA ACEPTAR/CANCELAR -->
+                <TitledPane text="Aceptar">
+                    <content>
+                        <HBox alignment="BOTTOM_RIGHT" spacing="10">
+                     <CheckBox allowIndeterminate="true" disable="true" indeterminate="true" mnemonicParsing="false" text="Acepto las condiciones" />
+                            <Button fx:id="btnCancelar" text="Ver condiciones" />
+                        </HBox>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </center>
+
+    <!-- PANEL IZQUIERDO: TEXTAREA CON SCROLL HORIZONTAL -->
+    <left>
+        <ScrollPane fitToWidth="true" hbarPolicy="AS_NEEDED" prefWidth="200.0" vbarPolicy="NEVER">
+            <content>
+                <TextArea fx:id="textArea" prefWidth="198.0" text="Prueba de campo de texto con scroll horizontal.&#10;" />
+            </content>
+        </ScrollPane>
+    </left>
+
+</BorderPane>

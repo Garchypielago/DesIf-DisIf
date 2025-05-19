@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.ejercicioseventos_dialogos_unidad10.choiceEjercicio.ChoiceEjercicioController"
+      alignment="CENTER" prefWidth="300" prefHeight="300">
+    <ListView fx:id="listView" prefHeight="200" prefWidth="200"/>
+    <Button text="Mostrar diálogo" fx:id="btnMostrar" onAction="#onMostrarDialog"/>
+</VBox>

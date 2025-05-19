@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    javafxVersion = '17.0.2'
+}
+
+dependencies {
+    implementation "org.openjfx:javafx-controls:${javafxVersion}"
+    implementation "org.openjfx:javafx-fxml:${javafxVersion}"
+}
+
+application {
+    mainClass = 'ejercicio1_AGS.MainEjercicio1_AGS'
+}

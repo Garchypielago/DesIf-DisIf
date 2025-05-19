@@ -25,6 +25,21 @@ public class Person {
         this.birthDate = new SimpleObjectProperty<LocalDate>(LocalDate.of(1990, 1, 1));
     }
 
+    public Person(
+            String firstName,
+            String lastName,
+            String street,
+            String city,
+            String postalCode,
+            LocalDate birthDate
+    ) {
+        this.firstName = new SimpleStringProperty(firstName);
+        this.lastName = new SimpleStringProperty(lastName);
+        this.streetAddress = new SimpleStringProperty(street);
+        this.city = new SimpleStringProperty(city);
+        this.postalCode = new SimpleStringProperty(postalCode);
+        this.birthDate = new SimpleObjectProperty<>(birthDate);
+    }
 
     public String getFirstName() {
         return firstName.get();

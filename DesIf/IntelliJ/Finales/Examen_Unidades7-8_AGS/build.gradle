@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.openjfx:javafx-controls:17"
+    implementation "org.openjfx:javafx-fxml:17"
+}
+
+application {
+    mainClass = 'ejercicio1_ags.MainEjercicio1_AGS'
+}

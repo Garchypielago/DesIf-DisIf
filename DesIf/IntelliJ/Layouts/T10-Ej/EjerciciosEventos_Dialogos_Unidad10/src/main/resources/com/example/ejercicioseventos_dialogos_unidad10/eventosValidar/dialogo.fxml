@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.ejercicioseventos_dialogos_unidad10.eventosValidar.DialogoController"
+      alignment="CENTER" prefWidth="250" prefHeight="120" fx:id="root">
+    <TextField fx:id="tfDialog" promptText="Introduce texto…"/>
+    <HBox spacing="10">
+        <Button text="Aceptar" fx:id="btnAceptar" onAction="#onAceptar"/>
+        <Button text="Cancelar" fx:id="btnCancelar" onAction="#onCancelar"/>
+    </HBox>
+</VBox>

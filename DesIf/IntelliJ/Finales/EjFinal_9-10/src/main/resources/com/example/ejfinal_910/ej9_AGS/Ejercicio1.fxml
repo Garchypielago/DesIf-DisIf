@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane id="main" prefHeight="400.0" prefWidth="500.0" stylesheets="@Ejercicio1.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ejfinal_910.ej9_AGS.ControllerEjercicio1">
+   <top>
+      <MenuBar styleClass="menubar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+               <items>
+                  <MenuItem disable="true" mnemonicParsing="false" text="Guardar" />
+                  <CheckMenuItem mnemonicParsing="false" selected="true" text="Guardado automático" />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Herramientas">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Listado" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <RadioMenuItem mnemonicParsing="false" text="Perspectiva 1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="perspectiva" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem mnemonicParsing="false" text="Perspectiva 2" toggleGroup="$perspectiva" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox id="lateral" prefHeight="375.0" prefWidth="153.0">
+         <children>
+            <TilePane alignment="CENTER" prefColumns="2" prefRows="2" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button mnemonicParsing="false" styleClass="." text="Añadir" />
+                  <Button mnemonicParsing="false" text="Quitar" />
+                  <CheckBox allowIndeterminate="true" indeterminate="true" mnemonicParsing="false" text="Marcar 1" />
+                  <CheckBox mnemonicParsing="false" selected="true" text="Marcar 2" />
+               </children>
+            </TilePane>
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <AnchorPane id="inferior" prefHeight="60.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="284.0" layoutY="18.0" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <ComboBox fx:id="combo" prefWidth="150.0" promptText="(Seleccione..)" />
+                  <Label alignment="TOP_LEFT" contentDisplay="TOP" text="Módulo">
+                     <tooltip>
+                        <Tooltip text="Combo que permite seleccionar un módulo" />
+                     </tooltip>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane id="central" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView fx:id="listado" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+</BorderPane>

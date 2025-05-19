@@ -1,0 +1,62 @@
+.root {
+    -fx-background-color: #ADD8E6;
+}
+
+MenuBar {
+    -fx-background-color: #B0E0E6;
+}
+
+.menu-item:disabled{
+    -fx-background-color: lightgray;
+}
+
+#lateral{
+    -fx-background-color: #ADD8E6;
+}
+
+#lateral > TilePane > Button{
+    -fx-font-style: italic;
+}
+
+#lateral > TilePane > CheckBox:indeterminate{
+    -fx-underline: true;
+}
+
+.central{
+    -fx-background-color: #ADD8E6;
+}
+
+#central {
+    -fx-background-color: LightYellow;
+    -fx-background-radius: 25;
+    -fx-padding: 10;
+    -fx-border-color: red;
+    -fx-border-width: 2;
+    -fx-border-radius: 25;
+}
+
+TreeView {
+    -fx-border-color: blue;
+    -fx-border-width: 1.5;
+}
+
+.tree-cell:selected {
+    -fx-text-fill: yellow;
+}
+
+#inferior {
+    -fx-background-color:   #5F9EA0;
+}
+
+.combo-box .button-cell {
+    -fx-font-weight: bold;
+}
+
+.combo-box .list-cell:selected {
+    -fx-font-weight: bold;
+}
+
+#inferior Label:hover {
+    -fx-cursor: hand;
+    -fx-opacity: 0.8;
+}

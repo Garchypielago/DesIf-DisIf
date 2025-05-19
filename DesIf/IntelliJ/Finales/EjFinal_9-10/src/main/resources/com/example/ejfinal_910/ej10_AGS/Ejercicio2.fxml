@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/20"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.ejfinal_910.ej10_AGS.ControllerEjercicio2"
+      spacing="10" alignment="CENTER">
+    <TextField fx:id="inputField" promptText="Introducir número"/>
+    <HBox spacing="5" alignment="CENTER">
+        <Button fx:id="addButton" text="Añadir" onAction="#onAdd" disable="true"/>
+        <Button fx:id="closeButton" text="Cerrar" onAction="#onClose"/>
+    </HBox>
+    <ListView fx:id="listView" onMouseClicked="#onListClick"/>
+</VBox>

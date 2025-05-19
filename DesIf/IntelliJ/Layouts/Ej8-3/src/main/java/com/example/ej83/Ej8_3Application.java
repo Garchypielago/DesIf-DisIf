@@ -70,7 +70,6 @@ public class Ej8_3Application extends Application {
         }
     }
 
-    /** Returns the main stage. */
     public Stage getPrimaryStage() {
         return primaryStage;
     }

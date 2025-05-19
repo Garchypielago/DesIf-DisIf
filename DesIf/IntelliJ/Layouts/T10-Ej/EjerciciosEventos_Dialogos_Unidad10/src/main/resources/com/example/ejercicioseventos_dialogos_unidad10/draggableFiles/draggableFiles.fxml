@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.ejercicioseventos_dialogos_unidad10.draggableFiles.DraggableController"
+            prefWidth="400" prefHeight="200">
+    <Label fx:id="sourceLabel" layoutX="20" layoutY="20" text="Source String"/>
+    <Label fx:id="destinationLabel" layoutX="200" layoutY="20" text="Destination"/>
+    <Pane fx:id="dropPane" layoutX="20" layoutY="100" prefWidth="360" prefHeight="80"
+          style="-fx-border-color: gray; -fx-border-style: dashed;">
+    </Pane>
+</AnchorPane>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<VBox spacing="10" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.ejercicioseventos_dialogos_unidad10.eventosValidar.MainController"
+      alignment="CENTER" prefWidth="300" prefHeight="150">
+    <TextField fx:id="tfPrincipal" promptText="Texto recibido…" />
+    <Button text="Mostrar diálogo" fx:id="btnMostrarDialog" onAction="#onMostrarDialog"/>
+</VBox>

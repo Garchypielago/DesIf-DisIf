@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<VBox spacing="20" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.ejercicioseventos_dialogos_unidad10.pagination.PaginationController"
+      alignment="CENTER" prefWidth="300" prefHeight="300">
+    <Pagination fx:id="pagination"/>
+    <ProgressBar fx:id="progress" prefWidth="200"/>
+</VBox>
